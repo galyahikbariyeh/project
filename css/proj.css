@@ -38,16 +38,17 @@ line-height: 0.3;
 height: 90vh;
 width: 100%;
 
+
 }
 .button2{
     padding: 2px 5px;
     border-radius: 10px;
 
 }
-/* .button2:hover{
+.button2:hover{
     background-color: bisque ;
  
-} */
+}
 .carousel-item {
     min-height: 300px;
 }
@@ -79,7 +80,7 @@ p{width: 60%;
     padding: 0.73rem;
 }
 
-.carousel-inner::before{
+/* .carousel-inner::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -88,4 +89,55 @@ p{width: 60%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
+} */
+.card-bottom{
+    right: 0;
+    margin-top: -178px;
+    border-radius: 0;
+}
+.card-text{
+    color: beige;
+}
+.card-color{
+    background-color: black;
+    border-radius: 0;
+}
+.bg-dark {
+    margin-right: 30px;
+   
+
+}
+.footer{
+    background-color: bisque;
+    margin-top: -15%;
+}
+.rounded-0{
+height: 300px;
+}
+#ft footer{
+    grid-area: footer;
+    background-color: black;
+  
+}
+h2{
+    font: 1em sans-serif;
+}
+
+@media only screen and (max-width:700px) {
+.bg-light{
+    text-align: center;
+}
+.navbar-light .navbar-nav .nav-link{
+    margin-right: 50px;
+}
+h5{
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+p{
+    padding: 10px 15px;
+    font-size: 15px;
+}
+    
 }
