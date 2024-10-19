@@ -128,7 +128,7 @@ height: 300px;
 h2{
     font: 2em sans-serif;
 }
-h1{
+h1{margin-top: 50px;
     font-size: 1.8rem;
 }
 /* h6{margin-bottom: 100%;
@@ -159,6 +159,7 @@ font-weight: 800px;
     padding: 0;
  }
  .footer .footer-box{
+    height: 250px;
     gap: 9rem;
    /* margin-top: 350px; */
    margin-top: 200px;
@@ -171,6 +172,10 @@ font-weight: 800px;
 
     .bg-light{
         text-align: center;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(0, 0, 0, .55);
+        margin-bottom: 10px;
     }
  }
  p{
@@ -187,9 +192,15 @@ font-weight: 800px;
 h3{
     font-size: 2rem;
 }
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:767px) {
+    body{
+        padding: 0px 0px;
+    }
 .bg-light{
     text-align: center;
+    
+        width: 699;
+        
 }
 .navbar-light .navbar-nav .nav-link{
     margin-right: 50px;
@@ -203,17 +214,96 @@ p{
     padding: 10px 15px;
     font-size: 15px;
 }
-    
+.w-100-height {
+    height: 60vh;
+    width: 100%;
+    box-sizing: border-box;
+  
+}
+h4{
+    margin-left: 10px;
+}
+#btt{
+    margin-left: 10px;
+}
+
 }
 @media only screen and (max-width:500px){
-   
+    h5{
+        font-size: 20px;
+    }
+    body{
+        padding: 0px 0px;
+    }
     .bg-light{
         text-align: center;
         width: 100%;
+        height: 300px;
+        width: 450p;
     }
-    body{
+    /* body{
         padding: 0;
         margin: 0px 20px;
+    } */
+    ul li{
+   
+        display:list-item ;
+        margin: 10px 10px;
+        font-size: larger;
+      
     }
-     
+    .footer .footer-box {
+        height: 900px;
+    gap: 9rem;
+    /* margin-top: 350px; */
+    margin-top: 200px;
+    display: grid;
+    width: 100%;
+    grid-template-columns:   1fr ;
+   
+    }
+    h1{
+        font-size: small;
+       
+    }
+    /* .bg-light{
+        height: 300px;
+        width: 475px;
+    } */
+    /* .navbar-collapse {
+        z-index: 1;
+        margin-bottom: 100px;
+        margin-top: 0px;
+    } */
+    /* ol, ul {
+        padding-left: 0;
+        padding-right: 12px;
+        margin-right:70px ;}
+        .navbar-expand-lg .navbar-nav {
+            margin-top: 15px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+      */.form-control {
+        width: auto;
+      }
+      h1{
+        margin-left: 10px;
+      }
+      /* :root {
+        scroll-behavior: smooth;
+        display: ruby;
+        margin-right: 60px;
+    } */
+      /* .container-flex-properties {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+      } */
+      /* .w-100-height {
+        height: 90vh;
+       width: auto;
+    } */
 }
