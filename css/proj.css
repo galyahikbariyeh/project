@@ -146,11 +146,12 @@ h1{margin-top: 50px;
  }
  
  .ms-auto {
-font-size: 28px;
+font-size: 20px;
 font-weight: 800px;
+/* margin-right: 280px; */
  }
  .footer img{
-    width: 100px;
+    width: 150px;
  }
  .footer{
     width: 100%;
@@ -167,15 +168,35 @@ font-weight: 800px;
     width: 100%;
     grid-template-columns: 1.8fr 1fr 1fr 1fr;
 
+
  }
+ .fa-square-facebook:before {
+    content: "\f082";
+    margin-left: 30px;}
+    .fa-whatsapp:before {
+        content: "\f232";
+        margin-left: 30px;
+    }
+    .fa-instagram:before {
+        content: "\f16d";
+        margin-left: 30px;
+    }
+    .fa-linkedin:before {
+        content: "\f08c";
+        margin-left: 30px;
+    }
  @media only screen and (max-width:1024px){
 
     .bg-light{
         text-align: center;
+        height: 400px;
     }
     .navbar-light .navbar-nav .nav-link {
         color: rgba(0, 0, 0, .55);
         margin-bottom: 10px;
+    }
+    .navbar>.container{
+        margin-bottom: 500px;
     }
  }
  p{
@@ -193,14 +214,20 @@ h3{
     font-size: 2rem;
 }
 @media only screen and (max-width:767px) {
+    .ms-auto{
+        margin-right: 20px;
+    }
     body{
         padding: 0px 0px;
     }
 .bg-light{
     text-align: center;
-    
+    height: 400px;
         width: 699;
         
+}
+.navbar>.container{
+    margin-bottom: 500px;
 }
 .navbar-light .navbar-nav .nav-link{
     margin-right: 50px;
@@ -210,7 +237,7 @@ h5{
     letter-spacing: 0;
     line-height: normal;
 }
-p{
+p{margin-left: 20px;
     padding: 10px 15px;
     font-size: 15px;
 }
@@ -221,14 +248,21 @@ p{
   
 }
 h4{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 #btt{
-    margin-left: 10px;
+    margin-left: 30px;
+    font-size: small;
+}
+h1{
+    text-align: auto;
 }
 
 }
 @media only screen and (max-width:500px){
+    p{
+        margin-left: 30px;
+    }
     h5{
         font-size: 20px;
     }
@@ -238,7 +272,7 @@ h4{
     .bg-light{
         text-align: center;
         width: 100%;
-        height: 300px;
+        height: 500px;
         width: 450p;
     }
     /* body{
@@ -253,8 +287,11 @@ h4{
       
     }
     .footer .footer-box {
+        
+           
+            gap: 2rem;
         height: 900px;
-    gap: 9rem;
+   
     /* margin-top: 350px; */
     margin-top: 200px;
     display: grid;
@@ -284,13 +321,39 @@ h4{
             text-align: center;
             margin-left: 10px;
         }
-
+ ol, ul {
       */.form-control {
         width: auto;
       }
-      h1{
-        margin-left: 10px;
+      /* ol, ul {
+        margin-left: 15px;
+      } */
+      h1{font-size: medium;
+        margin-left: 30px;
       }
+
+      .rounded-0 {
+        margin-left: 20px;
+        width: 90%;
+        border-radius: 0 !important;
+    }
+    .mt-3{
+       
+            font-size: 10px;
+            margin: 20px;
+    }
+    .ms-auto {
+        margin-right: 30px;
+    }
+    h2{margin-left: 40px;
+        font-size:1rem;
+    }
+    /* .bg-dark {
+        font-size: small;
+    } */
+     h4{
+        font-size: 1.5rem;
+     }
       /* :root {
         scroll-behavior: smooth;
         display: ruby;
