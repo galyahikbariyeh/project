@@ -1,19 +1,16 @@
 var userForm1=document.getElementById('registerForm')
-
 var userName=document.getElementById('form3Example1cg')
 var email=document.getElementById('form3Example3cg')
-
-
 var phone =document.getElementById('form3Example4cg')
 var allUsers=JSON.parse(localStorage.getItem('userData')) || []
-var result=document.getElementById('result')
+//var result=document.getElementById('result')
 userForm1.addEventListener('submit',function (event){
     event.preventDefault()
     console.log(userName.value)
     console.log(email.value)
     console.log(phone.value)
     
-    var p=false
+    // var p=false
     var userData=
     {userName:userName.value,email:email.value,phone:phone.value}
     console.log(allUsers)
@@ -23,13 +20,17 @@ userForm1.addEventListener('submit',function (event){
         //         alert('only digit')
         //         return 
         //     }
-    if(phone.length !== 10){
-    alert('wrong num')
-        p=true
-    }else{
-        p=false
+    for(var i=0;i<allUsers.length;i++){
+    if(phone.value.length !== 10){
+    alert('wrong number')
+    //   return
+      break
     }
-   
+    else{
+        alert('correct number')
+        break
+    }
+     }
     allUsers.push(userData)
     localStorage.setItem('userData',JSON.stringify(allUsers))
     
