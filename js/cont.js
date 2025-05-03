@@ -1,10 +1,10 @@
-var userForm1=document.getElementById('registerForm')
+var contactForm=document.getElementById('contactForm')
 var userName=document.getElementById('form3Example1cg')
 var email=document.getElementById('form3Example3cg')
 var phone =document.getElementById('form3Example4cg')
 var allUsers=JSON.parse(localStorage.getItem('userData')) || []
 //var result=document.getElementById('result')
-userForm1.addEventListener('submit',function (event){
+contactForm.addEventListener('submit',function (event){
     event.preventDefault()
     console.log(userName.value)
     console.log(email.value)
