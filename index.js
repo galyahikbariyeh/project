@@ -88,10 +88,10 @@ const upload = multer({
 
 app.post('/api/createreal', upload.single('image'), async (req, res) => {
   try {
-    const { title, price } = req.body;
+    const { title, price ,type} = req.body;
     const image = req.file?.filename;
 
-    const newProperty = new Property({ title, price, image });
+    const newProperty = new Property({ title, price, image,type });
     await newProperty.save();
 
     res.json({ message: '✅ تمت الإضافة بنجاح', property: newProperty });

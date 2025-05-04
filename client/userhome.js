@@ -198,9 +198,15 @@ async function getProperties() {
 
             // تاريخ الإضافة
            /* const td4 = document.createElement('td');
-            const date = new Date(property.createdAt);
-            td4.textContent = date.toLocaleDateString();
+            td4.textContent = property.typeofReal
+            
             tr.appendChild(td4);*/
+            const tdType = document.createElement('td');
+
+// تحويل القيمة إلى اسم معروض
+
+tdType.textContent =  property.type;
+tr.appendChild(tdType);
 
            
             const td5 = document.createElement('td');
@@ -277,9 +283,13 @@ async function  deleteProperty(id) {
    async function addProperty() {
     const title = document.getElementById('addTitle').value;
     const price = document.getElementById('addPrice').value;
+    const type = document.getElementById('addType').value; 
     const imageFile = document.getElementById('addImage').files[0];
+   
+   
+   
   
-    if (!title || !price || !imageFile) {
+    if (!title || !price || !type || !imageFile) {
        alert('Please fill out all fields')
         return;
     }
@@ -300,7 +310,11 @@ async function  deleteProperty(id) {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('price', price);
+    formData.append('type', type); 
     formData.append('image', imageFile);
+   
+   
+    
    
 
     try {
@@ -459,5 +473,7 @@ addPropertyForm.addEventListener('submit',async(e)=>{
     console.log(response)
     
 })*/
+
+///////////////
 
 

@@ -17,14 +17,15 @@ const storage = multer.diskStorage({
   exports.addProperty = [
     upload.single('image'),
     async (req, res) => {
-      try {
-        const { title, price } = req.body;
+      try {//addtype
+        const { title, price ,type} = req.body;
         const image = req.file ? req.file.filename : null;
   
         const newProperty = new Property({
           title,
           price,
-          image
+          image,
+          type
         });
   
         await newProperty.save();
@@ -66,15 +67,15 @@ exports.getAllReal= async(req,res)=>{
  }*/
 //addtype
     exports.createReal = async (req, res) => {
-        const { title, price} = req.body;
+        const { title, price } = req.body;
         const image = req.file?.filename;
       
-        if (!title || !price || !image   ) {
+        if (!title || !price || !image    ) {
           return res.status(400).json({ message: 'الرجاء تعبئة كل الحقول وإرفاق صورة' });
         }
       
         try {
-          const newReal = new RealEstate({ title, price, image, type });
+          const newReal = new RealEstate({ title, price, image });
           await newReal.save();
           res.status(201).json({ message: 'تمت الإضافة بنجاح', real: newReal });
         } catch (error) {
