@@ -63,6 +63,8 @@ addForm.addEventListener('submit',async function (e) {
 })*/
 
 
+// متغيرات عامة
+
 
  
 

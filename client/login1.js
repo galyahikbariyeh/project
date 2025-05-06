@@ -20,7 +20,7 @@ Loginform.addEventListener('submit',async function (e) {
             alert('User logged in successfully')
             sessionStorage.setItem('authToken',data.token)
             //comuserhome-->add
-             window.location.href='userhome.html'
+             window.location.href='adminhome.html'
         }
         else{
 
