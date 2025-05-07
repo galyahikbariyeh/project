@@ -19,8 +19,11 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage });
   
-  // إرسال البيانات مع صورة
+      
   router.post('/real', upload.single('image'), createReal);
+
+  
+ 
 
 
 

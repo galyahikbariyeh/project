@@ -132,7 +132,7 @@ async function getUsers(){
 }
 
 getUsers()
-
+//اترجاع بيانات
 
 var API_URL = 'http://127.0.0.1:5050/api/real';
 
@@ -175,17 +175,17 @@ async function getProperties() {
         data.forEach(property => {
             const tr = document.createElement('tr');
             
-            // عنوان العقار
+            
             const td1 = document.createElement('td');
             td1.textContent = property.title;
             tr.appendChild(td1);
 
-            // سعر العقار
+            
             const td2 = document.createElement('td');
             td2.textContent = property.price;
             tr.appendChild(td2);
 
-            // صورة العقار
+              
             const td3 = document.createElement('td');
             const img = document.createElement('img');
             img.src = `http://127.0.0.1:5050/uploads/${property.image}`;
@@ -196,14 +196,14 @@ async function getProperties() {
             //type//
            
 
-            // تاريخ الإضافة
+              
            /* const td4 = document.createElement('td');
             td4.textContent = property.typeofReal
             
             tr.appendChild(td4);*/
             const tdType = document.createElement('td');
 
-// تحويل القيمة إلى اسم معروض
+ 
 
 tdType.textContent =  property.type;
 tr.appendChild(tdType);
@@ -211,7 +211,7 @@ tr.appendChild(tdType);
            
             const td5 = document.createElement('td');
             
-            // زر التعديل
+              
             const updateButton = document.createElement('button');
             updateButton.className = 'btn btn-primary me-2';
             updateButton.textContent = 'Update';
@@ -220,7 +220,7 @@ tr.appendChild(tdType);
             updateButton.onclick = () => editProperty(property);
             td5.appendChild(updateButton);
 
-            // زر الحذف
+              
             const deleteButton = document.createElement('button');
             deleteButton.className = 'btn btn-danger';
             deleteButton.textContent = 'Delete';
@@ -264,11 +264,12 @@ async function  deleteProperty(id) {
         console.log(data)
         if(data.message == 'RealEstate delete successfully '){
             alert('RealEstate delete successfully')
-            window.location.reload()
+           window.location.reload()
           
         }
         else{
-            window.location.reload()
+           window.location.reload()
+           
         }
        
       })
