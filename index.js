@@ -116,7 +116,22 @@ app.post('/add', upload.single('image'), async (req, res) => {
     res.status(500).json({ error: 'حدث خطأ أثناء حفظ العقار' });
   }
 });
-
+//
+app.get('/api/public/real', async (req, res) => {
+    try {
+        const properties = await RealEstate.find().sort({ createdAt: -1 });
+        if (!properties || properties.length === 0) {
+            return res.status(404).json({ message: 'لا توجد عقارات متاحة حالياً' });
+        }
+        res.json(properties);
+    } catch (error) {
+        console.error('Error fetching properties:', error);
+        res.status(500).json({ 
+            message: 'حدث خطأ في جلب البيانات',
+            error: error.message 
+        });
+    }
+});
   
 app.use('/api', userRouter);
 app.use('/api', realRouter);
